@@ -84,3 +84,29 @@ $ git add -i [<文件路径>]
 $ git add --interactive [<文件路径>]
 
 ```
+
+# git commit
+
+`git commit`将暂存区中的文件提交到本地仓库
+
+`git commit -m <提交的描述信息>` 添加描述信息
+
+# git fetch 
+
+`git fetch <远程仓库别名>` 将远程仓库所有分支的最新版本全部取回到本地
+
+
+# git pull
+
+从远程仓库获取最新版本并合并到本地
+
+# git push
+
+把本地仓库的提交推送到远程仓库
+
+`git push <远程仓库的别名> <本地分支名>:<远程分支名>`
+
+`git push <远程仓库的别名> --delete <远程分支名>`
+
+# git log 显示提交记录
+
