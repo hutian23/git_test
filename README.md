@@ -55,3 +55,67 @@
 `git remote add <远程仓库的别名> <远程仓库的URL地址>`    ***添加远程仓库***
 
 `git remote rename <现名> <新名>` 修改名称
+
+`git remote remove <远程仓库的别名>` 删除远程仓库
+
+
+# 分支命令
+
+`git branch -v` 列出本地所有分支并显示最后一次提交
+
+`git branch <分支名>` 创建新分支，基于上一次提交建立
+
+# git add
+
+```
+# 把指定的文件添加到暂存区中
+$ git add <文件路径>
+
+# 添加所有修改、已删除的文件到暂存区中
+$ git add -u [<文件路径>]
+$ git add --update [<文件路径>]
+
+# 添加所有修改、已删除、新增的文件到暂存区中，省略 <文件路径> 即为当前目录
+$ git add -A [<文件路径>]
+$ git add --all [<文件路径>]
+
+# 查看所有修改、已删除但没有提交的文件，进入一个子命令系统
+$ git add -i [<文件路径>]
+$ git add --interactive [<文件路径>]
+
+```
+
+# git commit
+
+`git commit`将暂存区中的文件提交到本地仓库
+
+`git commit -m <提交的描述信息>` 添加描述信息
+
+# git fetch 
+
+`git fetch <远程仓库别名>` 将远程仓库所有分支的最新版本全部取回到本地
+
+
+# git pull
+
+从远程仓库获取最新版本并合并到本地
+
+# git push
+
+把本地仓库的提交推送到远程仓库
+
+`git push <远程仓库的别名> <本地分支名>:<远程分支名>`
+
+`git push <远程仓库的别名> --delete <远程分支名>`
+
+# git log 显示提交记录
+
+# 关于debug
+
+### 解决Git中fatal: refusing to merge unrelated histories
+
+问题在于两个分支之间没有取得关系
+
+解决方案，在后面追加 --allow-unrelated-histories
+
+
