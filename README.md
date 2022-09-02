@@ -110,3 +110,12 @@ $ git add --interactive [<文件路径>]
 
 # git log 显示提交记录
 
+# 关于debug
+
+### 解决Git中fatal: refusing to merge unrelated histories
+
+问题在于两个分支之间没有取得关系
+
+解决方案，在后面追加 --allow-unrelated-histories
+
+
